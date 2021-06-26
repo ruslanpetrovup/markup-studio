@@ -1,0 +1,45 @@
+// Наши сильные стороны
+.work {
+  padding-top: 94px;
+}
+.work__line {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.work__item {
+  width: 270px;
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+.work__block {
+  display: flex;
+  width: 270px;
+  padding: 25px 0;
+  background-color: $filtr;
+  border-radius: 4px;
+}
+.work__icon {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work__title {
+  margin-bottom: 10px;
+  margin-top: 30px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $lead-text-color;
+}
+.work__text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $contacts-text;
+}

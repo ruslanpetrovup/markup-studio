@@ -1,0 +1,154 @@
+@import '../util/color-util-project';
+
+.footer {
+  background: $hero;
+  padding: 60px 0;
+}
+// Логотип
+.footer__logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $second-text-color;
+  text-decoration: none;
+  border-color: transparent;
+  &-span {
+    color: $bg-color;
+  }
+}
+// Контакты
+.footer__contacts {
+  display: block;
+}
+.footer__contacts-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $bg-color;
+  margin: 0;
+  margin-top: 20px;
+}
+.footer__contacts-link {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $footer-link;
+  text-decoration: none;
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+}
+// Соц. Сети
+.footer__social {
+  margin-left: 70px;
+}
+.footer__social-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $bg-color;
+}
+.footer__social-line {
+  display: flex;
+  margin-top: 20px;
+}
+.footer__social-item:not(:first-child) {
+  margin-left: 10px;
+}
+.footer__social-link {
+  display: flex;
+  padding: 12px 12px;
+  background-color: $footer-icon;
+  border-radius: 50%;
+  color: $bg-color;
+  transition: background-color 250ms $animation;
+  &:focus,
+  &:hover {
+    background-color: $second-text-color;
+  }
+}
+.footer__social-icon {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  fill: currentColor;
+}
+// Форма подписки
+.subscribe {
+  margin-left: 110px;
+  padding-top: 10px;
+}
+.subscribe__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $bg-color;
+  margin-bottom: 20px;
+}
+.subscribe__form {
+  display: flex;
+}
+.subscribe__form-mail {
+  display: flex;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::folder {
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &:focus {
+    outline: 1px solid transparent;
+    color: $bg-color;
+  }
+}
+.subscribe__form-button {
+  display: flex;
+  margin: 0;
+  padding: 10px 29px;
+  margin-left: 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $bg-color;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.subscribe__icon-button {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}

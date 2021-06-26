@@ -1,0 +1,44 @@
+.company {
+  padding: 94px 0;
+}
+.company__title {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: $lead-text-color;
+}
+.company__line {
+  display: flex;
+  margin-top: 50px;
+}
+.company__item:not(:first-child) {
+  margin-left: 30px;
+}
+.company__link {
+  display: flex;
+  width: 170px;
+  border: 1px solid $icon;
+  border-radius: 4px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  color: $icon;
+  transition: color 250ms $animation, border 250ms $animation;
+  &:focus,
+  &:hover {
+    color: $second-text-color;
+    border-color: $second-text-color;
+  }
+}
+.company__icon {
+  fill: currentColor;
+  height: 50px;
+  &:focus,
+  &:hover {
+    fill: currentColor;
+  }
+}

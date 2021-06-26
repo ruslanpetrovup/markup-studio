@@ -1,0 +1,45 @@
+// Чем мы занимаемся
+.metier {
+  padding: 94px 0;
+}
+.metier__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $lead-text-color;
+}
+.metier__line {
+  display: flex;
+  list-style: none;
+}
+.metier__item:not(:first-child) {
+  margin-left: 30px;
+}
+.metier__block-images {
+  position: relative;
+}
+.metier__images {
+  display: block;
+}
+.metier__thumb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $work-bg;
+}
+.metier__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $bg-color;
+  padding: 27px 0;
+}

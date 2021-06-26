@@ -1,0 +1,202 @@
+@import '../util/color-util-project';
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $black-modal;
+  opacity: 1;
+  transition: opacity 800ms linear;
+}
+.backdrop--is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  padding: 40px 40px;
+  transform: translate(-50%, -50%);
+  background-color: $bg-color;
+}
+.modal__title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.04;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $lead-text-color;
+  margin-bottom: 12px;
+}
+.form-buy {
+  display: flex;
+}
+.form-buy__field-form {
+  display: block;
+  margin-bottom: 10px;
+}
+.form-buy__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: $contacts-text;
+}
+.form-buy__modal-icon {
+  position: relative;
+}
+.form-buy__line {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: $second-text-color;
+  &:focus {
+    border: 1px solid $second-text-color;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  &:focus + .form-buy__icon-span {
+    fill: $second-text-color;
+  }
+}
+.form-buy__icon-span {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.form-buy__icon-window {
+  width: 18px;
+  height: 18px;
+}
+.form-buy__comment-form {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  &:focus {
+    border: 1px solid $second-text-color;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  &::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+.form-buy__rules {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.form-buy__rules-icon {
+  display: flex;
+  position: relative;
+}
+.form-buy__input-icon {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin-left: 17px;
+  &:checked + .form-buy__span-icon {
+    background-color: $second-text-color;
+    background-image: url(../images/icon-check.svg);
+    border: 2px solid $second-text-color;
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+.form-buy__span-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+  border: 2px solid $lead-text-color;
+  border-radius: 3px;
+}
+.form-buy__rules-text {
+  align-items: center;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-left: 9px;
+  letter-spacing: 0.03em;
+  user-select: none;
+  color: $lead-text-color;
+}
+.form-buy__rules-link {
+  color: $second-text-color;
+  text-decoration: underline;
+}
+.form-buy__submit-modal {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 10px 55px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: $bg-color;
+  background-color: $second-text-color;
+}
+.form-buy__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $bg-color;
+  cursor: pointer;
+  &:hover .form-buy__close-icon {
+    fill: $second-text-color;
+  }
+}
+.form-buy__close-icon {
+  width: 18px;
+  height: 14px;
+}

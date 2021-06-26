@@ -1,0 +1,199 @@
+@import '../util/color-util-project';
+
+@media screen and (max-width: 768px) {
+  .header-page {
+    border-bottom: 1px solid $border-color;
+  }
+  .container {
+    width: 479px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 15px;
+  }
+  .navigation__logo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: $second-text-color;
+    &-span {
+      color: $lead-text-color;
+    }
+  }
+  .navigation__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    color: $second-text-color;
+    top: 21px;
+    right: 25px;
+    padding: 0;
+    margin: 0;
+
+    &-icons {
+      width: 50px;
+      height: 50px;
+    }
+    &-icons:hover {
+      fill: currentColor;
+    }
+  }
+  .navigation__menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 48px 40px;
+    background-color: white;
+  }
+  .navigation__menu-item {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+  .navigation__menu-link {
+    color: $lead-text-color;
+    &:hover {
+      color: $second-text-color;
+    }
+  }
+  .navigation__contacts {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .navigation__contacts-item:not(:last-child) {
+    margin-top: auto;
+  }
+  .navigation__contacts-icon {
+    display: none;
+  }
+}
+// Компьютерная версия
+@media screen and (min-width: 1200px) {
+  .header-page {
+    border-bottom: 1px solid $border-color;
+  }
+  .container {
+    display: flex;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 15px;
+  }
+  // Навигация
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  // Лого
+  .navigation__logo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $second-text-color;
+    text-decoration: none;
+    border-color: transparent;
+    &-span {
+      color: $lead-text-color;
+    }
+  }
+  // Меню
+  .navigation__menu {
+    display: flex;
+    list-style: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-left: 93px;
+    padding: 0;
+    &-item:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+  .navigation__menu-link {
+    display: block;
+    text-decoration: none;
+    color: $lead-text-color;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms $animation;
+    &:focus,
+    &:hover {
+      color: $second-text-color;
+    }
+  }
+  // Контакты
+  .navigation__contacts {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    color: $contacts-text;
+    list-style: none;
+    align-items: center;
+  }
+  .navigation__contacts-item:not(:first-child) {
+    margin-left: 50px;
+  }
+  .navigation__contacts-link {
+    color: $contacts-text;
+    text-decoration: none;
+    padding: 32px 0;
+    display: flex;
+    transition: color 250ms $animation;
+    &:hover,
+    &:focus {
+      color: $second-text-color;
+    }
+  }
+  .navigation__contacts-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 10px;
+    &:hover,
+    &:focus {
+      fill: currentColor;
+    }
+  }
+  // Активное состояние
+  .navigation__menu-link--active {
+    position: relative;
+    color: $second-text-color;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $second-text-color;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+// Наша команда
+.team {
+  padding: 94px 0;
+  background-color: $filtr;
+}
+.team__title-head {
+  font-weight: 700;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 50px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $lead-text-color;
+}
+.team__line {
+  display: flex;
+}
+.team__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  overflow: hidden;
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+.team__images {
+  display: block;
+}
+.team__block-item {
+  padding: 30px 32px;
+  background-color: $bg-color;
+}
+.team__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: $lead-text-color;
+}
+.team__text {
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  color: $contacts-text;
+  margin-top: 10px;
+}
+.team__icon-line {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.team__item-icon:not(:first-child) {
+  margin-left: 10px;
+}
+.team__icon-link {
+  display: flex;
+  overflow: hidden;
+  border-radius: 50%;
+  padding: 12px 12px;
+  color: $icon;
+  background-color: $bg-color;
+  transition: color 250ms $animation, background-color 250ms $animation;
+  &:focus,
+  &:hover {
+    background-color: $second-text-color;
+    color: $bg-color;
+    overflow: hidden;
+  }
+}
+.team__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  &:focus,
+  &:hover {
+    fill: currentColor;
+  }
+}

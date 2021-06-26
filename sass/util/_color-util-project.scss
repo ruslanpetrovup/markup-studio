@@ -1,0 +1,29 @@
+$bg-color: #ffffff;
+$second-text-color: #2196f3;
+$lead-text-color: #212121;
+$contacts-text: #757575;
+$hero: #2f303a;
+$footer-link: rgba(255, 255, 255, 0.6);
+$footer-icon: rgba(255, 255, 255, 0.1);
+$filtr: #f5f4fa;
+$border-color: #ececec;
+$icon: #afb1b8;
+$animation: cubic-bezier(0.4, 0, 0.2, 1);
+$bg-card: rgba(33, 150, 243, 0.9);
+$work-bg: rgba(47, 48, 58, 0.8);
+$black-modal: rgba(0, 0, 0, 0.2);
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}

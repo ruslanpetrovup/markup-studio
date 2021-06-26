@@ -1,0 +1,35 @@
+main {
+  display: none;
+}
+footer {
+  display: none;
+}
+@import 'util/color-util-project';
+// Шапка
+@import 'component/header';
+
+// Герой
+@import 'component/hero';
+
+// Работа
+@import 'component/work';
+
+// Чем мы занимаемся
+@import 'component/metier';
+
+// Наша команда
+@import 'component/team';
+
+// Логотипы компаний
+@import 'component/company';
+
+// Модальное окно
+@import 'component/modal-window';
+
+// Страница портфолио
+// Фильтр
+@import 'component/filtr';
+// Карточки продукта
+@import 'component/cards';
+// Подвал
+@import 'component/footer';
