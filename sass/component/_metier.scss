@@ -1,4 +1,9 @@
 // Чем мы занимаемся
+@media screen and (max-width: 768px) {
+  .metier {
+    display: none;
+  }
+}
 .metier {
   padding: 94px 0;
 }

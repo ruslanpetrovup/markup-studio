@@ -2,22 +2,22 @@
 // Мобильная версия
 @media screen and (max-width: 768px) {
   .work {
-    padding-top: 60px;
+    padding: 60px 0;
   }
   .work__line {
     // display: flex;
   }
   .work__item {
     width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   .work__block {
     display: flex;
     padding: 25px 0;
     background-color: $filtr;
     border-radius: 4px;
-    &:not(:first-child) {
-      margin-top: 30px;
-    }
   }
   .work__icon {
     width: 70px;
