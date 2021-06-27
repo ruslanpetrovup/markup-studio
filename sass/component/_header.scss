@@ -5,12 +5,17 @@
     border-bottom: 1px solid $border-color;
   }
   .container {
-    width: 479px;
+    max-width: 479px;
     margin-right: auto;
     margin-left: auto;
     padding: 0px 15px;
   }
+  .navigation {
+    display: flex;
+  }
   .navigation__logo {
+    display: flex;
+    padding: 12px 0;
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -21,6 +26,18 @@
     &-span {
       color: $lead-text-color;
     }
+  }
+  .navigation__button-open {
+    display: flex;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+  }
+  .navigation__button-open-icons {
+    width: 50px;
+    height: 50px;
   }
   .navigation__button {
     position: absolute;
@@ -45,10 +62,13 @@
     }
   }
   .navigation__menu-mobile {
+    display: none;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 798px;
     padding: 48px 40px;
     background-color: white;
   }
@@ -71,16 +91,71 @@
   }
   .navigation__contacts {
     display: flex;
-    flex-direction: column;
-    align-content: space-between;
-  }
-  .navigation__contacts-item:not(:last-child) {
+    flex-direction: column-reverse;
     margin-top: auto;
+  }
+  .navigation__contacts-item {
+    &:last-child {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $second-text-color;
+    }
+    &:first-child {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+      margin-top: 32px;
+      color: $contacts-text;
+    }
+  }
+  .navigation__contacts-link {
+    color: inherit;
   }
   .navigation__contacts-icon {
     display: none;
   }
+  .navigation__social-networks {
+    display: flex;
+    margin-top: 60px;
+    &-item:not(:first-child) {
+      margin-left: 10px;
+      border-left: 1px solid rgba(33, 33, 33, 0.2);
+      padding-left: 10px;
+    }
+  }
+  .navigation__social-networks-item {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16px;
+    letter-spacing: 0.02em;
+  }
+  .navigation__social-networks-link {
+    color: $second-text-color;
+  }
 }
+
+// Таблекта
+@media screen and (min-width: 768px) {
+  .navigation__button-open {
+    display: none;
+  }
+  .navigation__button {
+    display: none;
+  }
+  .navigation__social-networks {
+    display: none;
+  }
+}
+
 // Компьютерная версия
 @media screen and (min-width: 1200px) {
   .header-page {
@@ -113,6 +188,9 @@
     }
   }
   // Меню
+  .navigation__menu-mobile {
+    display: flex;
+  }
   .navigation__menu {
     display: flex;
     list-style: none;
@@ -144,8 +222,6 @@
   // Контакты
   .navigation__contacts {
     display: flex;
-    margin: 0;
-    padding: 0;
     margin-left: auto;
     font-family: Roboto;
     font-style: normal;
@@ -154,7 +230,6 @@
     line-height: 1.1;
     letter-spacing: 0.03em;
     color: $contacts-text;
-    list-style: none;
     align-items: center;
   }
   .navigation__contacts-item:not(:first-child) {
