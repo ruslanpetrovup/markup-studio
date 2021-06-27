@@ -1,44 +1,103 @@
-.company {
-  padding: 94px 0;
-}
-.company__title {
-  text-align: center;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  color: $lead-text-color;
-}
-.company__line {
-  display: flex;
-  margin-top: 50px;
-}
-.company__item:not(:first-child) {
-  margin-left: 30px;
-}
-.company__link {
-  display: flex;
-  width: 170px;
-  border: 1px solid $icon;
-  border-radius: 4px;
-  height: 92px;
-  justify-content: center;
-  align-items: center;
-  color: $icon;
-  transition: color 250ms $animation, border 250ms $animation;
-  &:focus,
-  &:hover {
-    color: $second-text-color;
-    border-color: $second-text-color;
+// Мобильная версия
+@media screen and (max-width: 768px) {
+  .company {
+    padding: 60px 0;
+  }
+  .company__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $lead-text-color;
+  }
+  .company__line {
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .company__item {
+    width: calc((100% - 30px) / 2);
+    margin-bottom: 30px;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    &:nth-child(n + 4) {
+      margin-bottom: 0;
+    }
+  }
+  .company__link {
+    display: flex;
+    width: 175px;
+    // padding-left: 57px;
+    // padding-right: 57px;
+    border: 1px solid $icon;
+    border-radius: 4px;
+    height: 92px;
+    color: $icon;
+    align-items: center;
+    transition: color 250ms $animation, border 250ms $animation;
+    &:focus,
+    &:hover {
+      color: $second-text-color;
+      border-color: $second-text-color;
+    }
+  }
+  .company__icon {
+    fill: currentColor;
+    height: 40px;
+    &:focus,
+    &:hover {
+      fill: currentColor;
+    }
   }
 }
-.company__icon {
-  fill: currentColor;
-  height: 50px;
-  &:focus,
-  &:hover {
+// Компьютерная версия
+@media screen and (min-width: 1200px) {
+  .company {
+    padding: 94px 0;
+  }
+  .company__title {
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: $lead-text-color;
+  }
+  .company__line {
+    display: flex;
+    margin-top: 50px;
+  }
+  .company__item:not(:first-child) {
+    margin-left: 30px;
+  }
+  .company__link {
+    display: flex;
+    width: 170px;
+    border: 1px solid $icon;
+    border-radius: 4px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    color: $icon;
+    transition: color 250ms $animation, border 250ms $animation;
+    &:focus,
+    &:hover {
+      color: $second-text-color;
+      border-color: $second-text-color;
+    }
+  }
+  .company__icon {
     fill: currentColor;
+    height: 50px;
+    &:focus,
+    &:hover {
+      fill: currentColor;
+    }
   }
 }
