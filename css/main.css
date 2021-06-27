@@ -102,8 +102,12 @@ a {
   .navigation__button-icons:hover {
     fill: currentColor;
   }
-  .navigation__menu-mobile {
-    display: none;
+  .navigation__menu-mobile.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 9;
+    overflow: scroll;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -111,10 +115,13 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 798px;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     background-color: white;
+  }
+  .navigation__menu-mobile {
+    display: none;
   }
   .navigation__menu-item {
     font-family: Roboto;

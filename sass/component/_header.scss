@@ -61,16 +61,21 @@
       fill: currentColor;
     }
   }
-  .navigation__menu-mobile {
-    display: none;
+  .navigation__menu-mobile.is-open {
+    display: flex;
+    z-index: 9;
+    overflow: scroll;
     flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 798px;
+    width: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     background-color: white;
+  }
+  .navigation__menu-mobile {
+    display: none;
   }
   .navigation__menu-item {
     font-family: Roboto;

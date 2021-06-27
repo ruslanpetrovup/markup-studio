@@ -21,13 +21,14 @@
             <!-- Логотип -->
         <a href="./index.html" class="navigation__logo">Web<span class="navigation__logo-span">Studio</span></a>
         <!-- Меню  -->
-        <button type="button" class="navigation__button-open">
+        <button type="button" class="navigation__button-open js-open-menu" aria-expanded="false"
+          aria-controls="mobile-menu">
             <svg class="navigation__button-open-icons">
                 <use href="./images/mobile-menu.svg#icon-menu_40px" class="navigation__button-icon1"></use>
             </svg>
         </button>
-        <div class="navigation__menu-mobile">
-            <button class="navigation__button" type="button">
+        <div class="navigation__menu-mobile js-menu-container" id="mobile-menu">
+            <button class="navigation__button js-close-menu" type="button">
                 <svg class="navigation__button-icons">
                     <use href="./images/mobile-menu.svg#icon-close_40px" class="navigation__button-icon2"></use>
                 </svg>
@@ -457,6 +458,10 @@
         </div>
         </div>
     </footer>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
