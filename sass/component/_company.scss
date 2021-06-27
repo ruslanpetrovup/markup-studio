@@ -21,6 +21,7 @@
   .company__item {
     width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
+
     &:nth-child(2n + 1) {
       margin-right: 30px;
     }
@@ -30,7 +31,7 @@
   }
   .company__link {
     display: flex;
-    width: 175px;
+    width: 100%;
     // padding-left: 57px;
     // padding-right: 57px;
     border: 1px solid $icon;
