@@ -130,29 +130,21 @@
     display: flex;
     margin-top: 60px;
   }
-  .navigation__social-networks-item {
+  .navigation__social-networks-item:not(:first-child) {
+    margin-left: 10px;
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    padding-left: 10px;
+  }
+  .navigation__social-networks-link {
+    color: $second-text-color;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.16px;
     letter-spacing: 0.02em;
-    &:not(:first-child) {
-      margin-left: 10px;
-      border-left: 1px solid rgba(33, 33, 33, 0.2);
-      padding-left: 10px;
-    }
   }
-  .navigation__social-networks-link {
-    color: $second-text-color;
-    // border-left: 1px solid rgba(33, 33, 33, 0.2);
-    // padding-left: 10px;
-  }
-  // .navigation__social-networks-link.none {
-  //   border-left: none;
-  // }
 }
-
 // Таблекта
 @media screen and (min-width: 768px) {
   .navigation__button-open {

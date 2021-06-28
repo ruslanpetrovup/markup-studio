@@ -181,14 +181,6 @@ a {
     display: flex;
     margin-top: 60px;
   }
-  .navigation__social-networks-item {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.16px;
-    letter-spacing: 0.02em;
-  }
   .navigation__social-networks-item:not(:first-child) {
     margin-left: 10px;
     border-left: 1px solid rgba(33, 33, 33, 0.2);
@@ -196,6 +188,12 @@ a {
   }
   .navigation__social-networks-link {
     color: #2196f3;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16px;
+    letter-spacing: 0.02em;
   }
 }
 
