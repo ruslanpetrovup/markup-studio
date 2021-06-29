@@ -47,6 +47,55 @@
     letter-spacing: 0.03em;
   }
 }
+// Таблетка
+@media screen and (min-width: 768px) {
+  .work {
+    padding: 60px 0;
+  }
+  .work__line {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .work__item {
+    width: calc((100% - 30px) / 2);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+  .work__block {
+    display: flex;
+    padding: 25px 0;
+    background-color: $filtr;
+    border-radius: 4px;
+  }
+  .work__icon {
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work__title {
+    margin-top: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $lead-text-color;
+  }
+  .work__text {
+    padding-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
 // Компьютерная версия
 @media screen and (min-width: 1200px) {
   .work {
@@ -54,8 +103,6 @@
   }
   .work__line {
     display: flex;
-    padding: 0;
-    margin: 0;
   }
   .work__item {
     width: 270px;

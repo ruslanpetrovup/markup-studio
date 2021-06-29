@@ -55,6 +55,63 @@
     }
   }
 }
+// Таблетка
+@media screen and (min-width: 768px) {
+  .company {
+    padding: 60px 0;
+  }
+  .company__title {
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: $lead-text-color;
+  }
+  .company__line {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .company__item {
+    width: calc((100% - 60px) / 3);
+    margin-left: 30px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-child(4) {
+      margin-left: 0;
+    }
+    &:nth-child(-1n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+  .company__link {
+    display: flex;
+    border: 1px solid $icon;
+    border-radius: 4px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    color: $icon;
+    transition: color 250ms $animation, border 250ms $animation;
+    &:focus,
+    &:hover {
+      color: $second-text-color;
+      border-color: $second-text-color;
+    }
+  }
+  .company__icon {
+    fill: currentColor;
+    height: 50px;
+    &:focus,
+    &:hover {
+      fill: currentColor;
+    }
+  }
+}
 // Компьютерная версия
 @media screen and (min-width: 1200px) {
   .company {

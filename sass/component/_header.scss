@@ -94,6 +94,9 @@
       color: $second-text-color;
     }
   }
+  .navigation__contacts-comp {
+    display: none;
+  }
   .navigation__contacts {
     display: flex;
     flex-direction: column-reverse;
@@ -145,8 +148,116 @@
     letter-spacing: 0.02em;
   }
 }
-// Таблекта
+// Таблетка
 @media screen and (min-width: 768px) {
+  .header-page {
+    border-bottom: 1px solid $border-color;
+  }
+  .container {
+    display: flex;
+    max-width: 738px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 15px;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .navigation__logo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $second-text-color;
+    text-decoration: none;
+    border-color: transparent;
+    &-span {
+      color: $lead-text-color;
+    }
+  }
+  .navigation__menu {
+    display: flex;
+    list-style: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-left: 93px;
+    padding: 0;
+    &-item:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+  .navigation__menu-link {
+    display: block;
+    text-decoration: none;
+    color: $lead-text-color;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms $animation;
+    &:focus,
+    &:hover {
+      color: $second-text-color;
+    }
+  }
+  .navigation__contacts {
+    display: none;
+  }
+  .navigation__contacts-comp {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    color: $contacts-text;
+    justify-content: center;
+  }
+  .navigation__contacts-item:not(:first-child) {
+    margin-top: 10px;
+  }
+  .navigation__contacts-link {
+    color: $contacts-text;
+    text-decoration: none;
+    display: flex;
+    transition: color 250ms $animation;
+    &:hover,
+    &:focus {
+      color: $second-text-color;
+    }
+  }
+  .navigation__contacts-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 10px;
+    &:hover,
+    &:focus {
+      fill: currentColor;
+    }
+  }
+  .navigation__menu-link--active {
+    position: relative;
+    color: $second-text-color;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $second-text-color;
+    }
+  }
   .navigation__button-open {
     display: none;
   }
@@ -190,9 +301,6 @@
     }
   }
   // Меню
-  .navigation__menu-mobile {
-    display: flex;
-  }
   .navigation__menu {
     display: flex;
     list-style: none;
@@ -223,6 +331,9 @@
   }
   // Контакты
   .navigation__contacts {
+    display: none;
+  }
+  .navigation__contacts-comp {
     display: flex;
     margin-left: auto;
     font-family: Roboto;
