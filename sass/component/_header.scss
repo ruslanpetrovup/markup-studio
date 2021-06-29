@@ -149,7 +149,7 @@
   }
 }
 // Таблетка
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .header-page {
     border-bottom: 1px solid $border-color;
   }
@@ -271,6 +271,15 @@
 
 // Компьютерная версия
 @media screen and (min-width: 1200px) {
+  .navigation__button-open {
+    display: none;
+  }
+  .navigation__button {
+    display: none;
+  }
+  .navigation__social-networks {
+    display: none;
+  }
   .header-page {
     border-bottom: 1px solid $border-color;
   }
