@@ -1,13 +1,19 @@
 // Герой
 // Мобильная версия
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .banner {
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero.jpg);
+      url(../images/hero-mobile.jpg);
     background-size: cover;
     background-position: 50% 50%;
     padding: 118px 0;
     text-align: center;
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .banner {
+      background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-mobile@2x.jpg);
+    }
   }
   .banner__title {
     max-width: 360px;
@@ -44,12 +50,18 @@
   .banner {
     text-align: center;
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero.jpg);
+      url(../images/hero-tablet.jpg);
     padding: 118px 0;
     background-position: 50% 50%;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .banner {
+      background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-tablet@2x.jpg);
+    }
   }
   .banner__title {
     font-size: 26px;

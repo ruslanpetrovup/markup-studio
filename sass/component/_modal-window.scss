@@ -22,7 +22,7 @@
   padding: 40px 40px;
   transform: translate(-50%, -50%);
   background-color: $bg-color;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     min-width: 370px;
   }
 }
