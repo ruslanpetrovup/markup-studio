@@ -61,6 +61,9 @@
     &:nth-child(odd) {
       margin-right: 30px;
     }
+    &:nth-child(n + 3) {
+      margin-top: 30px;
+    }
   }
   .work__block {
     display: flex;
@@ -81,7 +84,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
-    text-align: center;
+    text-align: left;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $lead-text-color;
@@ -94,6 +97,7 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    color: $contacts-text;
   }
 }
 // Компьютерная версия
